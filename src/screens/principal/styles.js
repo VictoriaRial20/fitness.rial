@@ -1,16 +1,16 @@
 import { StyleSheet } from "react-native";
+import { colors } from '../../constants';
 
 export const styles = StyleSheet.create({
     container:{
         height:'80%',
         alignItems:'center',
         justifyContent:'center',
-        //marginTop:180,
     },
     title:{
         fontSize:18,
         fontWeight: 'bold',
-        color: '#507DBC',
+        color: colors.text,
     },
     buttonContainer:{
         width: '60%',
@@ -21,6 +21,6 @@ export const styles = StyleSheet.create({
     },
     footButton:{
         fontSize:12,
-        color: '#507DBC',
+        color: colors.text,
     },
 });
