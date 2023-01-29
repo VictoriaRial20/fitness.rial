@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
     title:{
         fontSize:18,
-        fontWeight: 'bold',
+        fontFamily: 'AbhayaLibre-bold',
         color: colors.text,
     },
     buttonContainer:{
@@ -20,6 +20,7 @@ export const styles = StyleSheet.create({
         marginBottom:15,
     },
     footButton:{
+        fontFamily: 'AbhayaLibre-Medium',
         fontSize:12,
         color: colors.text,
     },

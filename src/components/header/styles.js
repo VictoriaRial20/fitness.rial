@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
     color: colors.white,
+    fontFamily: 'AbhayaLibre-SemiBold',
   }
 });
