@@ -1,10 +1,13 @@
-import { Header } from './components/index';
+import { Header } from './components';
+import { Principal } from './screens';
 import { View } from 'react-native';
 import { styles } from './styles';
+
 const App = () => {
   return (
     <View style={styles.container}>
-      <Header title="Fitness Group"/>
+      <Header title="FITNESS GROUP"/>
+      <Principal/>
     </View>
   );
 }
