@@ -1,9 +1,12 @@
 import { Button, Text, View } from "react-native";
+import React, { useState } from "react";
 
-import React from "react";
 import { styles } from "./styles";
 
-const Principal = () => {
+const Principal = ({onHandleLogin}) => {
+    const onHandlerLogin = () =>{
+        onHandleLogin(true)
+    };
     return (
         <View style={styles.container}>
             <Text style={styles.title}>*LOGO*</Text>
@@ -15,7 +18,7 @@ const Principal = () => {
 
                 <Button
                     title="Login"
-                    onPress={() => {}}
+                    onPress={onHandlerLogin}
                     color='#B6C7CB' />
             </View>
             <Text style={styles.footButton}>Forget the password</Text>
