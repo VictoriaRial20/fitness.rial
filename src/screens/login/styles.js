@@ -2,10 +2,17 @@ import { StyleSheet } from "react-native";
 import { colors } from "../../constants";
 export const styles = StyleSheet.create({
     container:{
+        flex:1,
         height:'80%',
         alignItems:'center',
         justifyContent:'center',
     },
+    image: {
+        flex:1,
+        width: '100%',
+        justifyContent:'center',
+        alignItems:'center',
+      },
     textInputContainer:{
         flexDirection:'row',
         width:'100%',
@@ -16,11 +23,12 @@ export const styles = StyleSheet.create({
         paddingEnd:20,
     },
     input:{
-        borderBottomWidth: 0.5,
+        borderBottomWidth: 1,
+        borderBottomColor: colors.white,
         paddingTop:10,
         width: 100,
         marginTop:5,
-        fontSize:17,
+        fontSize:18,
         fontFamily: 'AbhayaLibre-Regular',
     },
     buttonContainer:{
@@ -28,9 +36,20 @@ export const styles = StyleSheet.create({
         marginTop:15,
     },
     titleLogin:{
-        fontSize:15,
+        fontSize:17,
         fontFamily: 'AbhayaLibre-Medium',
-        marginBottom:10,
-        color: colors.text,
+        color: colors.white,
     }, 
+    footText:{
+        fontFamily: 'AbhayaLibre-Medium',
+        fontSize:12,
+        color: colors.white,
+        marginTop:10,
+    },
+    containerFoot:{
+        width:'45%',
+        justifyContent:'center',
+        marginTop:15,
+    },
+    
 });

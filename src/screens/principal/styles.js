@@ -3,6 +3,7 @@ import { colors } from '../../constants';
 
 export const styles = StyleSheet.create({
     container:{
+        flex:1,
         height:'80%',
         alignItems:'center',
         justifyContent:'center',
@@ -10,18 +11,18 @@ export const styles = StyleSheet.create({
     title:{
         fontSize:18,
         fontFamily: 'AbhayaLibre-bold',
-        color: colors.text,
+        color: colors.white,
     },
     buttonContainer:{
         width: '60%',
         height: '15%',
-        justifyContent:'space-between',
-        marginTop: 20,
-        marginBottom:15,
+        justifyContent:'space-around',
+        marginTop: 5,
     },
-    footButton:{
-        fontFamily: 'AbhayaLibre-Medium',
-        fontSize:12,
-        color: colors.text,
-    },
+    image: {
+        flex:1,
+        width: '100%',
+        justifyContent:'center',
+        alignItems:'center',
+      },
 });
