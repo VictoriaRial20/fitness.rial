@@ -1,6 +1,7 @@
 import { Button, ImageBackground, Text, View } from "react-native";
 
 import React from "react";
+import { colors } from "../../constants";
 import { styles } from "./styles";
 
 const image = { uri: 'https://img.freepik.com/foto-gratis/hombre-cuerda-entrenamiento-funcional_136403-6825.jpg?size=626' };
@@ -14,12 +15,12 @@ const Principal = ({ navigation }) => {
                     <Button
                         title="Sign Up"
                         onPress={() => { }}
-                        color='#A1C6EA' />
+                        color={colors.secondary} />
 
                     <Button
                         title="Login"
                         onPress={() => navigation.navigate('Login')}
-                        color='#B6C7CB' />
+                        color={colors.primary} />
                 </View>
             </ImageBackground>
         </View>
