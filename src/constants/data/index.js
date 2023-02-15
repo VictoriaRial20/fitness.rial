@@ -1,2 +1,2 @@
-export * from './categories';
+export * from './zone';
 export * from './muscule';

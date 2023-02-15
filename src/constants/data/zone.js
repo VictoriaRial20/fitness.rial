@@ -1,12 +1,12 @@
-export const CATEGORIES = [
+export const ZONE = [
     {
         id: 1,
         title: 'TREN SUPERIOR',
-        color: '#78CDD7',
+        color: '#A1C6EA',
     },
     {
         id: 2,
         title: 'TREN INFERIOR',
-        color: '#44A1A0',
+        color: '#BBD1EA',
     },
 ];

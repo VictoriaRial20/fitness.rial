@@ -1,19 +1,27 @@
-import { Button, Text, View } from "react-native";
+import { FlatList, SafeAreaView, } from "react-native";
 
-import { colors } from "../../constants";
+import { ZONE } from "../../constants/data/index";
+import { ZoneItem } from "../../components/index";
 import { styles } from "./styles";
 
 const Training = ({ navigation }) => {
+    const onSelected = (item) => {
+        navigation.navigate('Muscle', { 
+            zoneId: item.id,
+            title: item.title,
+        })
+    };
+    const renderItem =({ item }) => <ZoneItem item={item} onSelected={onSelected}/>;
+    const keyExtractor = (item) => item.id.toString();
     return (
-        <View style={styles.container}>
-            <Text>Training</Text>
-            <View>
-                <Button
-                    title="Musculos"
-                    onPress={() => navigation.navigate('Muscle')}
-                    color={colors.primary} />
-            </View>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <FlatList
+                data={ZONE}
+                renderItem={renderItem}
+                keyExtractor={keyExtractor}
+                style={styles.containerList}
+            />
+        </SafeAreaView>
     );
 };
 

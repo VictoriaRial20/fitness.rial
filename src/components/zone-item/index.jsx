@@ -2,7 +2,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 import { styles } from "./styles"
 
-const CategoryItem = ({item, onSelected}) => {
+const ZoneItem = ({item, onSelected}) => {
     return(
         <View style={styles.container}>
             <TouchableOpacity style={{...styles.contentContainer, backgroundColor: item.color}}
@@ -16,4 +16,4 @@ const CategoryItem = ({item, onSelected}) => {
     );
 };
 
-export default CategoryItem;
+export default ZoneItem;

@@ -6,6 +6,7 @@ export const MUSCLE = [
         exercise: 'Elevación de talón a una pierna', 
         weight: '10kg', 
         reps: 15,
+        time: 5,
     }, 
     { 
         id: 2, 
@@ -14,6 +15,7 @@ export const MUSCLE = [
         exercise: 'Sentadillas', 
         weight: '30kg', 
         reps: 20,
+        time: 10,
     }, 
     { 
         id: 3, 
@@ -22,6 +24,7 @@ export const MUSCLE = [
         exercise: 'Levantamiento de peso muerto', 
         weight: '50kg', 
         reps: 15,
+        time: 8,
     }, 
     { 
         id: 4, 
@@ -30,6 +33,7 @@ export const MUSCLE = [
         exercise: 'Extensión lateral con gomas', 
         weight: 'Goma', 
         reps: 30,
+        time: 10,
     }, 
     { 
         id: 5, 
@@ -38,6 +42,7 @@ export const MUSCLE = [
         exercise: 'Peso muerto rumano', 
         weight: '45kg', 
         reps: 15,
+        time: 15,
     }, 
     { 
         id: 6, 
@@ -46,6 +51,7 @@ export const MUSCLE = [
         exercise: 'Remo con barra', 
         weight: '15kg', 
         reps: 15,
+        time: 10,
     }, 
     { 
         id: 7, 
@@ -54,6 +60,7 @@ export const MUSCLE = [
         exercise: 'Push-up o flexiones', 
         weight: 'Peso corporal', 
         reps: 20,
+        time: 5,
     }, 
     { 
         id: 8, 
@@ -62,6 +69,7 @@ export const MUSCLE = [
         exercise: 'Plancha', 
         weight: 'Peso corporal', 
         reps: 30,
+        time: 15,
     }, 
     { 
         id: 9, 
@@ -70,6 +78,7 @@ export const MUSCLE = [
         exercise: 'Curl de bíceps con barra olímpica', 
         weight: '15kg', 
         reps: 10,
+        time: 10,
     },
     { 
         id: 10, 
@@ -78,6 +87,7 @@ export const MUSCLE = [
         exercise: 'Tríceps en polea superior con barra', 
         weight: '10kg', 
         reps: 10,
+        time: 8,
     },
     { 
         id: 11, 
@@ -86,5 +96,6 @@ export const MUSCLE = [
         exercise: 'Press de hombro en máquina', 
         weight: '10kg', 
         reps: 15,
+        time: 12,
     },
 ];
