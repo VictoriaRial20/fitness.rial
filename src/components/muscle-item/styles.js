@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
         marginVertical:10,
         borderRadius:10,
         height:120,
-        backgroundColor: colors.white,
+        backgroundColor: colors.primary,
     },
     contentContainer:{
         flex:1,
@@ -19,13 +19,13 @@ export const styles = StyleSheet.create({
     title:{
         fontSize:20,
         fontFamily:'AbhayaLibre-SemiBold',
-        color: colors.secondary,
+        color: colors.white,
     },
     muscleZone:{
     },
     time:{
-        fontSize:18,
+        fontSize:20,
         fontFamily:'AbhayaLibre-SemiBold',
-        color: colors.secondary,
+        color: colors.white,
     },
 });

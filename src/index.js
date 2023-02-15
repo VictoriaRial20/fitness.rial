@@ -1,7 +1,8 @@
 import { ActivityIndicator, View } from 'react-native';
 
 import AppNavigation from './navigation';
-//import { Header } from './components'; <Header title="FITNESS GROUP" />
+import { Provider } from 'react-redux';
+import store from './store';
 import { styles } from './styles';
 import { useFonts } from 'expo-font';
 
@@ -13,7 +14,7 @@ const App = () => {
     'AbhayaLibre-Regular': require('../assets/fonts/AbhayaLibre-Regular.ttf'),
     'AbhayaLibre-SemiBold': require('../assets/fonts/AbhayaLibre-SemiBold.ttf'),
   });
-  
+
   if (!loaded) {
     return (
       <View style={styles.containerloader}>
@@ -23,9 +24,11 @@ const App = () => {
   }
 
   return (
-    <View style={styles.container}>
-      <AppNavigation />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <AppNavigation />
+      </View>
+    </Provider>
   );
 }
 

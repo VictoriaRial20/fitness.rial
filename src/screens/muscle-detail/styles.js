@@ -9,25 +9,31 @@ export const styles = StyleSheet.create({
         justifyContent:'center',
     },
     title:{
-        fontSize: 20,
+        fontSize: 22,
         fontFamily: 'AbhayaLibre-Medium',
         marginBottom:15,
         borderBottomWidth:1,
+        borderBottomColor:colors.white,
+        color:colors.white,
     },
     exercise:{
-        fontSize: 18,
+        fontSize: 20,
         fontFamily: 'AbhayaLibre-Regular',
+        color:colors.white,
     },
     weight:{
         fontSize: 20,
         fontFamily: 'AbhayaLibre-Medium',
+        color:colors.white,
     },
     reps:{
         fontSize: 20,
         fontFamily: 'AbhayaLibre-Medium',
+        color:colors.white,
     },
     time:{
         fontSize: 16,
         fontFamily: 'AbhayaLibre-Medium',
+        color:colors.white,
     },
 });

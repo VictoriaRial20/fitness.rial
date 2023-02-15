@@ -1,12 +1,12 @@
 import { Text, View } from "react-native";
 
-import { MUSCLE } from "../../constants/data";
 import { styles } from "./styles";
+import { useSelector } from 'react-redux';
 
-const MuscleDetail = ( {navigation , route}) => {
-    const {muscleId , title} = route.params;
-    const muscle = MUSCLE.find((muscle) => muscle.id === muscleId) ;
-
+const MuscleDetail = ( {navigation }) => {
+    //const {muscleId , title} = route.params;
+    const muscle = useSelector((state) => state.muscle.selected);
+    //const muscle = MUSCLE.find((muscle) => muscle.id === muscleId) ;
     return(
         <View style={styles.container}>
             <Text style={styles.title}>{muscle.title}</Text>
