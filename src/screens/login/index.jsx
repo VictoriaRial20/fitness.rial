@@ -1,28 +1,59 @@
 import { Button, Keyboard, KeyboardAvoidingView, Platform, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
+import { UPDATED_FORM, onInputChange } from '../../utils/form';
 import { signIn, signUp } from '../../store/actions/index';
+import { useReducer, useState } from 'react';
 
 import { Input } from '../../components/index';
 import React from "react";
 import { colors } from '../../constants';
 import { styles } from "./styles";
 import { useDispatch } from'react-redux';
-import { useState } from 'react';
 
 const image = { uri: 'https://img.freepik.com/foto-gratis/hombre-cuerda-entrenamiento-funcional_136403-6825.jpg?size=626' };
+
+const initialState = {
+    email: {value: '', error: '', touched: false, hasError: true},
+    password: {value: '', error: '', touched: false, hasError: true},
+    isFormValid: false,
+};
+
+const formReducer = (state, action) => {
+    switch(action.type) {
+        case UPDATED_FORM:
+            const {name, value, hasError, error, touched, isFormValid} = action.data;
+            return {
+                ...state,
+                [name]: {
+                    ...state[name],
+                    value,
+                    hasError,
+                    error,
+                    touched,
+                },
+                isFormValid,
+            }
+        default:
+            return state;
+    }
+};
 
 const Login = ({ navigation }) => {
     const dispatch = useDispatch();
     const [isLogin, setIsLogin] = useState(true);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [formState, dispatchFormState] = useReducer(formReducer, initialState);
     const title = isLogin ? 'Login' : 'Register';
     const message = isLogin ? 'Dont have an account?' : 'Already have an account';
     const messageButton = isLogin ? 'Login' : 'Register';
 
     const onHandlerSubmit = () => {
-        //console.log(email, password)
-        dispatch( isLogin ? signIn(email, password) : signUp(email,password))
+        dispatch( isLogin 
+            ? signIn(formState.email.value, formState.password.value) 
+            : signUp(formState.email.value, formState.password.value))
     };
+
+    const onHandleInputChange = (value, type) => {
+        onInputChange(type, value, dispatchFormState, formState)
+    }
     return (
         <KeyboardAvoidingView style={styles.keybordContainer} behavior={Platform.OS === 'android' ? 'height' : 'padding'} enabled>
             <TouchableWithoutFeedback
@@ -39,11 +70,13 @@ const Login = ({ navigation }) => {
                             placeholderTextColor={colors.black}
                             autoCapitalize='none'
                             autoCorrect={false}
-                            onChangeText={(text) => setEmail(text)}
-                            value={email}
+                            onChangeText={(text) => onHandleInputChange(text, 'email')}
+                            value={formState.email.value}
+                            hasError={formState.email.hasError}
+                            error={formState.email.error}
+                            touched={formState.email.touched}
                             label="Email"
                             labelStyle={styles.label}
-                            //error='Email is required'
                         >
                         </Input>
                         <Input
@@ -54,8 +87,11 @@ const Login = ({ navigation }) => {
                             secureTextEntry
                             autoCapitalize='none'
                             autoCorrect={false}
-                            onChangeText={(text) => setPassword(text)}
-                            value={password}
+                            onChangeText={(text) => onHandleInputChange(text, 'password')}
+                            value={formState.password.value}
+                            hasError={formState.password.hasError}
+                            error={formState.password.error}
+                            touched={formState.password.touched}
                             label="Password"
                             labelStyle={styles.label}
                             //error='Password is required'
