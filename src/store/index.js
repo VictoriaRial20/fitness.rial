@@ -1,9 +1,12 @@
-import { combineReducers, createStore } from 'redux';
-import { muscleReducer, zoneReducer } from './reducers';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { authReducer, muscleReducer, zoneReducer } from './reducers';
+
+import thunk from 'redux-thunk';
 
 const rootReducer = combineReducers({
     muscle: muscleReducer,
     zone: zoneReducer,
+    auth: authReducer,
 });
 
-export  default createStore(rootReducer);
+export  default createStore(rootReducer, applyMiddleware(thunk));

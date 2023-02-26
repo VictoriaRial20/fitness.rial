@@ -1,27 +1,46 @@
-import { Button, ImageBackground, Keyboard, Text, TextInput, TouchableWithoutFeedback, View } from 'react-native';
+import { Button, Keyboard, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
+import { signIn, signUp } from '../../store/actions/index';
 
 import React from "react";
 import { colors } from '../../constants';
 import { styles } from "./styles";
+import { useDispatch } from'react-redux';
+import { useState } from 'react';
 
 const image = { uri: 'https://img.freepik.com/foto-gratis/hombre-cuerda-entrenamiento-funcional_136403-6825.jpg?size=626' };
 
 const Login = ({ navigation }) => {
+    const dispatch = useDispatch();
+    const [isLogin, setIsLogin] = useState(true);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const title = isLogin ? 'Login' : 'Register';
+    const message = isLogin ? 'Dont have an account?' : 'Already have an account';
+    const messageButton = isLogin ? 'Login' : 'Register';
+
+    const onHandlerSubmit = () => {
+        //console.log(email, password)
+        dispatch( isLogin ? signIn(email, password) : signUp(email,password))
+    };
     return (
-        <TouchableWithoutFeedback
-            onPress={() => {
-                Keyboard.dismiss();
-            }}>
-            <View style={styles.container}>
-                <ImageBackground source={image} resizeMode="cover" style={styles.image} >
-                    <Text style={styles.titleLogin}>Enter usarname and password</Text>
+        <KeyboardAvoidingView style={styles.keybordContainer} behavior={Platform.OS === 'android' ? 'height' : 'padding'} enabled>
+            <TouchableWithoutFeedback
+                onPress={() => {
+                    Keyboard.dismiss();
+                }}>
+                <View style={styles.container}>
+                    <Text style={styles.title}>{title}</Text>
                     <View style={styles.textInputContainer}>
                         <TextInput
                             style={styles.input}
                             keyboardType="default"
-                            placeholder='User'
-                            maxLength={10}
-                            placeholderTextColor={colors.white}
+                            placeholder='Email'
+                            //maxLength={10}
+                            placeholderTextColor={colors.black}
+                            autoCapitalize='none'
+                            autoCorrect={false}
+                            onChangeText={(text) => setEmail(text)}
+                            value={email}
                         >
                         </TextInput>
                         <TextInput
@@ -29,29 +48,30 @@ const Login = ({ navigation }) => {
                             keyboardType="default"
                             placeholder='Password'
                             maxLength={8}
-                            placeholderTextColor={colors.white}
+                            placeholderTextColor={colors.black}
+                            secureTextEntry
+                            autoCapitalize='none'
+                            autoCorrect={false}
+                            onChangeText={(text) => setPassword(text)}
+                            value={password}
                         >
                         </TextInput>
                     </View >
                     <View style={styles.buttonContainer}>
                         <Button
-                            title='LOGIN'
-                            onPress={() => { }}
+                            title={messageButton}
+                            onPress={onHandlerSubmit}
                             color={colors.primary}
                         />
                     </View>
-
-                    <Text style={styles.footText}>Forget the password</Text>
-                    <View style={styles.containerFoot}>
-                        <Button
-                            title='go back'
-                            onPress={() => navigation.goBack()}
-                            color={colors.black}
-                        />
+                    <View style={styles.prompt}>
+                        <TouchableOpacity style={styles.promptButton} onPress={() => setIsLogin(!isLogin)}>
+                            <Text style={styles.promptMessage}>{message}</Text>
+                        </TouchableOpacity>
                     </View>
-                </ImageBackground>
-            </View>
-        </TouchableWithoutFeedback>
+                </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
     )
 }
 

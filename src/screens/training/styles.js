@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
         flex:1,
         backgroundColor:colors.white,
         marginTop: StatusBar.currentHeight,
+
     },
     containerList:{
         flex:1,

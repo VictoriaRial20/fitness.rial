@@ -1,6 +1,9 @@
 import { StyleSheet } from "react-native";
 import { colors } from "../../constants";
 export const styles = StyleSheet.create({
+    keybordContainer:{
+        flex:1
+    },
     container:{
         flex:1,
         height:'80%',
@@ -24,32 +27,45 @@ export const styles = StyleSheet.create({
     },
     input:{
         borderBottomWidth: 1,
-        borderBottomColor: colors.white,
+        borderBottomColor: colors.black,
         paddingTop:10,
-        width: 100,
+        width: 140,
         marginTop:5,
-        fontSize:18,
+        fontSize:16,
         fontFamily: 'AbhayaLibre-Regular',
     },
     buttonContainer:{
         width: '70%',
         marginTop:15,
     },
-    titleLogin:{
-        fontSize:17,
-        fontFamily: 'AbhayaLibre-Medium',
-        color: colors.white,
+    title:{
+        fontSize:20,
+        fontFamily: 'AbhayaLibre-SemiBold',
+        color: colors.primary,
+        marginBottom:15,
     }, 
-    footText:{
-        fontFamily: 'AbhayaLibre-Medium',
-        fontSize:12,
-        color: colors.white,
-        marginTop:10,
-    },
     containerFoot:{
         width:'45%',
         justifyContent:'center',
         marginTop:15,
+    },
+    promptButton:{
+        width:'50%',
+        backgroundColor: colors.black,
+        padding:10,
+        borderRadius:3,
+        justifyContent:'center',
+        alignItems:'center',
+        marginTop:20,
+    },
+    prompt:{
+        width:'100%',
+        alignItems:'center',
+    },
+    promptMessage:{
+        fontFamily: 'AbhayaLibre-Regular',
+        fontSize:14,
+        color: colors.white,
     },
     
 });

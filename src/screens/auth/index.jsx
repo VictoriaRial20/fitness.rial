@@ -6,19 +6,14 @@ import { styles } from "./styles";
 
 const image = { uri: 'https://img.freepik.com/foto-gratis/hombre-cuerda-entrenamiento-funcional_136403-6825.jpg?size=626' };
 
-const Principal = ({ navigation }) => {
+const Auth = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image} >
                 <Text style={styles.title}>*LOGO*</Text>
                 <View style={styles.buttonContainer}>
                     <Button
-                        title="Sign Up"
-                        onPress={() => { }}
-                        color={colors.secondary} />
-
-                    <Button
-                        title="Login"
+                        title="Login/Register"
                         onPress={() => navigation.navigate('Login')}
                         color={colors.primary} />
                 </View>
@@ -27,4 +22,4 @@ const Principal = ({ navigation }) => {
     )
 };
 
-export default Principal;
+export default Auth;

@@ -4,7 +4,7 @@ import TabsNavigator from './tabs';
 const AppNavigation = () => {
     return(
         <NavigationContainer>
-            <TabsNavigator/>
+            <TabsNavigator/> 
         </NavigationContainer>
     );
 };
