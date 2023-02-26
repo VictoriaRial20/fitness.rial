@@ -6,42 +6,18 @@ export const styles = StyleSheet.create({
     },
     container:{
         flex:1,
-        height:'80%',
         alignItems:'center',
         justifyContent:'center',
-    },
-    image: {
-        flex:1,
-        width: '100%',
-        justifyContent:'center',
-        alignItems:'center',
-      },
-    textInputContainer:{
-        flexDirection:'row',
-        width:'100%',
-        justifyContent:'space-around',
-        alignItems:'center',
-        marginBottom:15,
-        paddingStart:20,
-        paddingEnd:20,
-    },
-    input:{
-        borderBottomWidth: 1,
-        borderBottomColor: colors.black,
-        paddingTop:10,
-        width: 140,
-        marginTop:5,
-        fontSize:16,
-        fontFamily: 'AbhayaLibre-Regular',
+        backgroundColor:colors.white,
     },
     buttonContainer:{
-        width: '70%',
+        width: '75%',
         marginTop:15,
     },
     title:{
-        fontSize:20,
+        fontSize:22,
         fontFamily: 'AbhayaLibre-SemiBold',
-        color: colors.primary,
+        color: colors.black,
         marginBottom:15,
     }, 
     containerFoot:{
@@ -50,8 +26,9 @@ export const styles = StyleSheet.create({
         marginTop:15,
     },
     promptButton:{
-        width:'50%',
-        backgroundColor: colors.black,
+        width:'55%',
+        borderColor:colors.black,
+        borderWidth:0.5,
         padding:10,
         borderRadius:3,
         justifyContent:'center',
@@ -65,7 +42,6 @@ export const styles = StyleSheet.create({
     promptMessage:{
         fontFamily: 'AbhayaLibre-Regular',
         fontSize:14,
-        color: colors.white,
+        color: colors.black,
     },
-    
 });

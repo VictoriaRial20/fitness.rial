@@ -1,6 +1,7 @@
-import { Button, Keyboard, KeyboardAvoidingView, Platform, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
+import { Button, Keyboard, KeyboardAvoidingView, Platform, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import { signIn, signUp } from '../../store/actions/index';
 
+import { Input } from '../../components/index';
 import React from "react";
 import { colors } from '../../constants';
 import { styles } from "./styles";
@@ -31,22 +32,23 @@ const Login = ({ navigation }) => {
                 <View style={styles.container}>
                     <Text style={styles.title}>{title}</Text>
                     <View style={styles.textInputContainer}>
-                        <TextInput
-                            style={styles.input}
+                        <Input
                             keyboardType="default"
-                            placeholder='Email'
+                            placeholder='Enter your email'
                             //maxLength={10}
                             placeholderTextColor={colors.black}
                             autoCapitalize='none'
                             autoCorrect={false}
                             onChangeText={(text) => setEmail(text)}
                             value={email}
+                            label="Email"
+                            labelStyle={styles.label}
+                            //error='Email is required'
                         >
-                        </TextInput>
-                        <TextInput
-                            style={styles.input}
+                        </Input>
+                        <Input
                             keyboardType="default"
-                            placeholder='Password'
+                            placeholder='Enter your password'
                             maxLength={8}
                             placeholderTextColor={colors.black}
                             secureTextEntry
@@ -54,8 +56,11 @@ const Login = ({ navigation }) => {
                             autoCorrect={false}
                             onChangeText={(text) => setPassword(text)}
                             value={password}
+                            label="Password"
+                            labelStyle={styles.label}
+                            //error='Password is required'
                         >
-                        </TextInput>
+                        </Input>
                     </View >
                     <View style={styles.buttonContainer}>
                         <Button
