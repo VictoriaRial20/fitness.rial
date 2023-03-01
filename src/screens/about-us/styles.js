@@ -4,8 +4,6 @@ import { colors } from '../../constants';
 export const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:colors.primary,
-        alignItems:'center',
-        justifyContent:'center',
+        backgroundColor:colors.white,
     },
 });

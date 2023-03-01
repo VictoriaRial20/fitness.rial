@@ -8,6 +8,7 @@ import {useSelector} from 'react-redux';
 const BottomTab = createBottomTabNavigator();
 
 const Tabs = () => {
+    //userId ? TrainingNavigation : AuthNavigation
     const userId = useSelector((state) => state.auth.userId);
     return(
         <BottomTab.Navigator
@@ -37,7 +38,7 @@ const Tabs = () => {
                         size={24}
                         color={colors.primary}/>
                 ),
-            }} component={userId ? TrainingNavigation : AuthNavigation}/>
+            }} component={TrainingNavigation}/>
             <BottomTab.Screen name="AboutUsTap" options={{
                 title:'About Us',
                 tabBarIcon: ({focused}) => (

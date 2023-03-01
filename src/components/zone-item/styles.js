@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
         marginHorizontal: 20,
         marginVertical: 10,
         height: 155,
-
     },
     contentContainer: {
         flex: 1,
@@ -20,8 +19,6 @@ export const styles = StyleSheet.create({
         fontFamily: 'AbhayaLibre-SemiBold',
         color: colors.primary,
         marginBottom: 50,
-        //backgroundColor:colors.white,
-        //padding:2,
     },
     image: {
         flex: 1,
