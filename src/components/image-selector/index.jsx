@@ -38,7 +38,7 @@ const ImageSelector = ({ onImage }) => {
         <View style={styles.container}>
             <View style={styles.preview}>
                 {!pickerUrl ? (
-                    <Text> no image selected</Text>
+                    <Text style={styles.textPreview}> no image selected</Text>
                 ): (
                     <Image style={styles.image} source={{uri: pickerUrl}}/>
                 )}

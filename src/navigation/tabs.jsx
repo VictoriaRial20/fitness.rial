@@ -1,6 +1,6 @@
-import AboutUsNavigation from './about-us';
 import AuthNavigation from './auth'
 import IonicIcons from '@expo/vector-icons/Ionicons';
+import QueriesNavigation from './queries';
 import TrainingNavigation from './training'
 import {colors} from '../constants';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -39,15 +39,15 @@ const Tabs = () => {
                         color={colors.primary}/>
                 ),
             }} component={TrainingNavigation}/>
-            <BottomTab.Screen name="AboutUsTap" options={{
-                title:'About Us',
+            <BottomTab.Screen name="QueriesTap" options={{
+                title:'Queries',
                 tabBarIcon: ({focused}) => (
                     <IonicIcons name={focused ? 'md-people' : 'md-people-outline'}
                         size={24}
                         color={colors.primary}/>
                 ),
                 
-            }} component={AboutUsNavigation}/>
+            }} component={QueriesNavigation}/>
             
         </BottomTab.Navigator>
     )

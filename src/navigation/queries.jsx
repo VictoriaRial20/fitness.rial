@@ -1,10 +1,10 @@
-import {AboutUs} from '../screens';
+import {Queries} from '../screens';
 import {colors} from '../constants';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-const AboutUsNavigation = () => {
+const QueriesNavigation = () => {
     return(
         <Stack.Navigator
             initialRouteName='Orders'
@@ -17,11 +17,11 @@ const AboutUsNavigation = () => {
                 }}
         >
             <Stack.Screen
-                name="AboutUs"
-                component={AboutUs}
+                name="Queries"
+                component={Queries}
             />
         </Stack.Navigator>
     )
 }
 
-export default AboutUsNavigation;
+export default QueriesNavigation;

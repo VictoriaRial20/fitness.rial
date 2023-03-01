@@ -1,16 +1,14 @@
-import { Text, View } from "react-native";
-
 import { ImageSelector } from "../../components";
+import { View } from "react-native";
 import { styles } from "./styles";
 
-const AboutUs = ( {navigation}) => {
+const Queries = ( {navigation}) => {
 
     const onImage  = (uri) => {
         console.warn(uri);
     }
     return(
         <View style={styles.container}>
-            <Text>AboutUs</Text>
             <ImageSelector
                 onImage={onImage}
             />
@@ -18,4 +16,4 @@ const AboutUs = ( {navigation}) => {
     );
 };
 
-export default AboutUs;
+export default Queries;

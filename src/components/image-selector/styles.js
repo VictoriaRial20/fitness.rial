@@ -14,9 +14,14 @@ export const styles = StyleSheet.create({
         borderColor: colors.black,
         borderWidth: 0.7,
     },
-
+    
     image:{
         width:"100%",
         height:"100%",
+    },
+
+    textPreview:{
+        fontFamily:'AbhayaLibre-Regular',
+        fontSize:14,
     },
 });
