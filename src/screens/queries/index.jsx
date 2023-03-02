@@ -1,4 +1,4 @@
-import { ImageSelector } from "../../components";
+import { QueriesItem } from "../../components";
 import { View } from "react-native";
 import { styles } from "./styles";
 
@@ -9,8 +9,7 @@ const Queries = ( {navigation}) => {
     }
     return(
         <View style={styles.container}>
-            <ImageSelector
-                onImage={onImage}
+            <QueriesItem
             />
         </View>
     );
