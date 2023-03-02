@@ -4,12 +4,11 @@ import QueriesNavigation from './queries';
 import TrainingNavigation from './training'
 import {colors} from '../constants';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {useSelector} from 'react-redux';
+
 const BottomTab = createBottomTabNavigator();
 
 const Tabs = () => {
-    //userId ? TrainingNavigation : AuthNavigation
-    const userId = useSelector((state) => state.auth.userId);
+    
     return(
         <BottomTab.Navigator
         initialRouteName='ShopTab'
