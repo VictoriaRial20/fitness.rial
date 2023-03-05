@@ -19,6 +19,9 @@ const QueriesNavigation = () => {
             <Stack.Screen
                 name="Queries"
                 component={Queries}
+                options={
+                    { headerShown: false }
+                }
             />
         </Stack.Navigator>
     )

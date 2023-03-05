@@ -1,4 +1,4 @@
-import { Button, Text, View } from 'react-native';
+import { Button, Text, TextInput, View } from 'react-native';
 
 import ImageSelector from '../image-selector/index';
 import { colors } from '../../constants';
@@ -6,19 +6,40 @@ import { styles } from './styles';
 
 const QueriesItem = () => {
     const onImage = (uri) => {
-        console.warn(uri);
+        //console.warn(uri);
     }
     return (
         <View style={styles.container}>
-            <Text>QUERIES.</Text>
+            
+            <View style={styles.containerInput}>
+                <Text style={styles.label}>Name:</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Enter your name"
+                    keyboardType="default"
+                />
+            </View>
+            <View style={styles.containerInput}>
+                <Text style={styles.label}>Query:</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Enter your query"
+                    keyboardType="default"
+                />
+            </View>
+            
+            <View style={styles.containerInput}>
+                <Text style={styles.label}>Number:</Text>
+                <TextInput
+                    style={styles.input}
+                    placeholder="Enter your number"
+                    keyboardType="numeric"
+                />
+            </View>
             <ImageSelector
                 onImage={onImage}
             />
-            <Button
-                title='Send'
-                color={colors.primary}
-                onPress={()=>null}
-            />
+            
         </View>
     )
 }

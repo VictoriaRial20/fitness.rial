@@ -3,16 +3,16 @@ import { colors } from "../../constants";
 export const styles = StyleSheet.create({
     container: {
         flex:1,
-        padding:20,
+        marginTop:15,
     },
     preview: {
         width: "100%",
-        height: 180,
+        height: 150,
         marginBottom: 20, 
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: colors.black,
-        borderWidth: 0.7,
+        borderColor: colors.primary,
+        borderWidth: 0.6,
     },
     
     image:{
@@ -24,4 +24,8 @@ export const styles = StyleSheet.create({
         fontFamily:'AbhayaLibre-Regular',
         fontSize:14,
     },
+    button:{
+        marginLeft:20,
+        marginRight:20,
+    }
 });
