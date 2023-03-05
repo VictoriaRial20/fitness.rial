@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontFamily: 'AbhayaLibre-SemiBold',
-        color: colors.primary,
+        color: colors.white,
         marginBottom: 50,
     },
     image: {

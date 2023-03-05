@@ -17,6 +17,7 @@ const QueriesItem = () => {
                     style={styles.input}
                     placeholder="Enter your name"
                     keyboardType="default"
+                    maxLength={20}
                 />
             </View>
             <View style={styles.containerInput}>
@@ -25,6 +26,8 @@ const QueriesItem = () => {
                     style={styles.input}
                     placeholder="Enter your query"
                     keyboardType="default"
+                    maxLength={200}
+                    multiline={true}
                 />
             </View>
             
@@ -34,6 +37,7 @@ const QueriesItem = () => {
                     style={styles.input}
                     placeholder="Enter your number"
                     keyboardType="numeric"
+                    maxLength={9}
                 />
             </View>
             <ImageSelector
