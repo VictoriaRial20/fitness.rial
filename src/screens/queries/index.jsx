@@ -2,11 +2,14 @@ import { Alert, Button, Keyboard, Text, TouchableWithoutFeedback, View } from "r
 
 import { QueriesItem } from "../../components";
 import { colors } from "../../constants";
+import { insertQuery } from "../../db";
 import { styles } from "./styles";
 
-const Queries = ({ navigation }) => {
+const Queries = ({ navigation }, name, query, number, image) => {
 
     const onHandledQuery = () => {
+        const result = insertQuery( name, query, number, image); 
+        //console.warn("result", result)  
         return Alert.alert("Query sent successfully", "We will contact you", [{ text: "Ok" }])
     };
     return (
