@@ -1,4 +1,4 @@
-import AuthNavigation from './auth'
+import AboutUsNavigation from './aboutUs';
 import IonicIcons from '@expo/vector-icons/Ionicons';
 import QueriesNavigation from './queries';
 import TrainingNavigation from './training'
@@ -23,13 +23,13 @@ const Tabs = () => {
         }}
         >
             <BottomTab.Screen name="AuthTap" options={{
-                title:'Get in',
+                title:'Contact',
                 tabBarIcon: ({focused}) => (
-                    <IonicIcons name={focused ? 'log-in' : 'log-in-outline'}
+                    <IonicIcons name={focused ? 'md-people' : 'md-people-outline'}
                         size={24}
                         color={colors.primary}/>
                 ),
-            }} component={AuthNavigation}/>
+            }} component={AboutUsNavigation}/>
             <BottomTab.Screen name="TrainingTap" options={{
                 title:'Training',
                 tabBarIcon: ({focused}) => (
@@ -41,7 +41,7 @@ const Tabs = () => {
             <BottomTab.Screen name="QueriesTap" options={{
                 title:'Queries',
                 tabBarIcon: ({focused}) => (
-                    <IonicIcons name={focused ? 'md-people' : 'md-people-outline'}
+                    <IonicIcons name={focused ? 'call' : 'call-outline'}
                         size={24}
                         color={colors.primary}/>
                 ),

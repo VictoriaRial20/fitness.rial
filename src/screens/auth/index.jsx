@@ -10,7 +10,6 @@ const Auth = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <ImageBackground source={image} resizeMode="cover" style={styles.image} >
-                <Text style={styles.title}>*LOGO*</Text>
                 <View style={styles.buttonContainer}>
                     <Button
                         title="Login/Register"

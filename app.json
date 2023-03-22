@@ -17,6 +17,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    
     "ios": {
       "supportsTablet": true,
       "bundleIdentier": "com.fitness.rial",
@@ -25,18 +26,18 @@
     
     "android": {
       "package": "com.fitness.rial",
-      "versionCode":1,
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "permissions":[
+      "permissions": [
         "CAMERA",
         "WRITE_EXTERNAL_STORAGE"
       ],
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyBYTNqx-lN-rzy3vesavPsaWU3OzwZs9fQ"
+          "apiKey": "AIzaSyBls2yePpBaR9AH7he24CvQ5IN6eaW999k"
         }
       }
     },
